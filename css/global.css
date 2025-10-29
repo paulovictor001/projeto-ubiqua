@@ -1,0 +1,9 @@
+/* esse arquivo serve para eliminar estilos padrões aplicados pelos navegadores (como margens, paddings e fontes) e garantir que o layout comece de uma base consistente em todos os navegadores. */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
