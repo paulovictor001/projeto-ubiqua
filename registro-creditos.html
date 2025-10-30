@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Créditos - EcoTrade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="responsive.css">
+    </head>
+<body class="dark-theme"> <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">EcoTrade</a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="dashboard-produtor.html">Meu Dashboard</a></li>
+                <li><a href="#meus-projetos">Meus Projetos</a></li>
+                <li><a href="#" id="logout-btn" class="btn-cta">Sair</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <button id="theme-toggle" title="Mudar Tema">
+                    <span class="icon">🌙</span>
+                </button>
+                <button id="lang-toggle" title="Mudar Idioma">
+                    <span class="icon">🌎</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-registro">
+        <section class="registration-form-section">
+            <h1 class="page-title">Registro de Novo Projeto de Créditos de Carbono</h1>
+            <p class="subtitle">Preencha os dados do seu projeto com o máximo de precisão. Todos os campos são essenciais para a auditoria.</p>
+
+            <form id="form-registro-creditos" class="card form-card">
+                
+                <fieldset>
+                    <legend class="fieldset-title">Detalhes do Projeto</legend>
+
+                    <div class="form-group">
+                        <label for="nome-projeto">Nome do Projeto:</label>
+                        <input type="text" id="nome-projeto" name="nome-projeto" required placeholder="Ex: Reforestamento Amazônia - Fase 1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo-projeto">Tipo de Projeto:</label>
+                        <select id="tipo-projeto" name="tipo-projeto" required>
+                            <option value="">Selecione o Tipo</option>
+                            <option value="A/R">Reflorestamento e Aflorestamento (A/R)</option>
+                            <option value="REDD+">REDD+ (Redução de Emissões por Desmatamento e Degradação)</option>
+                            <option value="Energia">Energia Renovável</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area-total">Área Total do Projeto (Hectares):</label>
+                        <input type="number" id="area-total" name="area-total" required min="1" step="any" placeholder="Ex: 1500">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="fieldset-title">Localização e Validação</legend>
+
+                    <div class="form-group">
+                        <label for="localizacao">Estado/Município:</label>
+                        <input type="text" id="localizacao" name="localizacao" required placeholder="Ex: Pará, Belém">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="certificacao">Certificação/Padrão (Ex: Verra, Gold Standard):</label>
+                        <input type="text" id="certificacao" name="certificacao" placeholder="Certificadora do projeto (Opcional)">
+                    </div>
+
+                </fieldset>
+                
+                <fieldset>
+                    <legend class="fieldset-title">Volumetria e Documentação</legend>
+
+                    <div class="form-group">
+                        <label for="volume-estimado">Volume Estimado de Créditos (tCO2e):</label>
+                        <input type="number" id="volume-estimado" name="volume-estimado" required min="1" step="1" placeholder="Ex: 50000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doc-projeto">Documento de Descrição do Projeto (PDD) - PDF:</label>
+                        <input type="file" id="doc-projeto" name="doc-projeto" accept=".pdf" required>
+                        <small class="help-text">Máximo de 10MB.</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doc-auditoria">Relatório de Auditoria/Verificação - PDF:</label>
+                        <input type="file" id="doc-auditoria" name="doc-auditoria" accept=".pdf">
+                        <small class="help-text">Documento que comprova a validação do volume (Opcional, mas recomendado).</small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="aceite-termos" name="aceite-termos" required>
+                        <label for="aceite-termos">Declaro que as informações são verdadeiras e aceito os <a href="#termos" target="_blank">Termos de Uso e Auditoria</a> da EcoTrade.</label>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="btn-primary-full">Registrar Projeto e Enviar para Análise</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    </body>
+</html>
