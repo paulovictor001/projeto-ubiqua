@@ -6,7 +6,14 @@
     <title>EcoTrade</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css"> </head>
+    <link rel="stylesheet" href="css/responsive.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
 <body>
 
     <header class="main-header">
@@ -25,11 +32,13 @@
             </ul>
             
             <div class="nav-utilities">
-                <button id="theme-toggle" title="Mudar Tema">
+                <button id="theme-toggle" class="button-header" title="Mudar Tema">
                     <span class="icon">🌙</span>
+                    <span class="button-text">Tema</span>
                 </button>
-                <button id="lang-toggle" title="Mudar Idioma">
+                <button id="lang-toggle" class="button-header" title="Mudar Idioma">
                     <span class="icon">🌎</span>
+                    <span class="button-text">Idioma</span>
                 </button>
             </div>
         </nav>
@@ -37,64 +46,133 @@
 
     <main>
         
-        <section id="hero-section" class="hero-section">
-            <div class="hero-content">
+        <section id="hero-section" class="hero-section-video">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="https://videos.pexels.com/video-files/4434230/4434230-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content" data-aos="fade-in" data-aos-duration="1000">
                 <h1>Transforme o Impacto Ambiental em Valor de Mercado.</h1>
                 <p>O marketplace de créditos de carbono regionais mais transparente e seguro da Amazônia. Conectamos Produtores Rurais e Empresas Sustentáveis.</p>
-                
                 <div class="hero-ctas">
                     <a href="marketplace.html" class="btn-primary-large">Comprar Créditos Agora</a>
                     <a href="#como-funciona" class="btn-secondary-large">Entenda o Processo</a>
                 </div>
             </div>
-            <div class="hero-image">[Imagem de uma área de floresta ou projeto sustentável]</div>
         </section>
         
-        <section id="como-funciona" class="section-padded how-it-works bg-soft">
-            <h2 class="section-title">Como o EcoTrade Garante a Transparência?</h2>
-            
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-icon">1</div>
-                    <h3>Registro de Origem</h3>
-                    <p>Produtores cadastram créditos, indicando origem, data de geração e documentação comprobatória.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-icon">2</div>
-                    <h3>Validação e Auditoria</h3>
-                    <p>Nossa equipe (ou IA) pré-audita os dados, garantindo que os créditos atendam a padrões internacionais.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-icon">3</div>
-                    <h3>Negociação Segura</h3>
-                    <p>Empresas compram créditos no Marketplace. A transação é rastreada e registrada.</p>
-                </div>
+        
+        <section id="transparencia" class="container-secao">
+          <h2 data-aos="fade-up">Como a EcoTrade Garante a Transparência</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Entenda os pilares que sustentam nossa confiança.</p>
+          
+          <div class="transparencia-container">
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+              <div class="first-content">
+                <img src="https://www.totvs.com/wp-content/uploads/2024/06/como-participar-do-mercado-de-carbono.jpg" alt="Rastreabilidade Total">
+                <span>Rastreabilidade Total</span>
+              </div>
+              <div class="second-content">
+                <span>Cada crédito de carbono é registrado em blockchain, permitindo que você siga sua origem desde o produtor até a compensação.</span>
+              </div>
             </div>
             
-            <p class="cta-link-bottom">Pronto para começar? <a href="cadastro.html">Cadastre-se para negociar.</a></p>
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+              <div class="first-content">
+                <img src="https://cdn.borainvestir.b3.com.br/2022/09/221733/mercado-de-carbono-co2-investimentos.jpg.webp" alt="Auditoria Independente">
+                <span>Auditoria Independente</span>
+              </div>
+              <div class="second-content">
+                <span>Nossos projetos são verificados por entidades terceirizadas e independentes, garantindo a veracidade e o impacto real.</span>
+              </div>
+            </div>
+            
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+              <div class="first-content">
+                <img src="https://maisagro.syngenta.com.br/media/uploads/2022/05/IMAGEM_3_creditos-de-carbono-na-agricultura-o-potencial-brasileiro.png" alt="Relatórios Públicos">
+                <span>Relatórios Públicos</span>
+              </div>
+              <div class="second-content">
+                <span>Disponibilizamos relatórios de impacto e financeiros de forma aberta, para que todos possam ver como os recursos são aplicados.</span>
+              </div>
+            </div>
+          </div>
         </section>
 
+        
         <section id="destaques" class="section-padded">
-            <h2 class="section-title">Créditos de Carbono em Destaque</h2>
-            <p class="subtitle">Veja alguns dos projetos mais recentes e de alto impacto disponíveis hoje.</p>
-            
+            <h2 class="section-title" data-aos="fade-up">Créditos de Carbono em Destaque</h2>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Veja alguns dos projetos mais recentes e de alto impacto disponíveis hoje.</p>
+          
             <div class="marketplace-preview">
-                <div class="credit-card">... (Conteúdo do Card 1) ...</div>
-                <div class="credit-card">... (Conteúdo do Card 2) ...</div>
-                <div class="credit-card">... (Conteúdo do Card 3) ...</div>
+                <a href="marketplace.html" class="e-card-link" data-aos="fade-up" data-aos-delay="200">
+                  <div class="e-card playing">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="infotop">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+                        <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784 14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701 3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476 19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091 12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466 16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402 15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864 19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528 16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68 20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path>
+                      </svg><br>
+                      Projeto de Reflorestamento 'Ypê'
+                      <br>
+                      <div class="name">
+                        Local: Rondônia, BR <br> Impacto: 1.500 TCO2/ano
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="marketplace.html" class="e-card-link" data-aos="fade-up" data-aos-delay="300">
+                  <div class="e-card playing">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="infotop">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+                        <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784 14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701 3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476 19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091 12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466 16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402 15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864 19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528 16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68 20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path>
+                      </svg><br>
+                      Energia Limpa 'Sol do Norte'
+                      <br>
+                      <div class="name">
+                        Local: Pará, BR <br> Impacto: 3.200 TCO2/ano
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="marketplace.html" class="e-card-link" data-aos="fade-up" data-aos-delay="400">
+                  <div class="e-card playing">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="infotop">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+                        <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784 14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701 3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476 19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091 12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466 16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402 15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864 19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528 16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68 20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path>
+                      </svg><br>
+                      Manejo de Resíduos 'BioGás'
+                      <br>
+                      <div class="name">
+                        Local: Amazonas, BR <br> Impacto: 900 TCO2/ano
+                      </div>
+                    </div>
+                  </div>
+                </a>
             </div>
             
-            <div class="center-cta">
-                <a href="marketplace.html" class="btn-primary-large">Ver o Marketplace Completo</a>
+            <div class="center-cta" data-aos="fade-up" data-aos-delay="500">
+                <a href="marketplace.html" class="btn">Ver o Marketplace Completo</a>
             </div>
         </section>
         
-        <section class="section-cta-produtor">
+        <section class="section-cta-produtor" data-aos="fade-in" data-aos-duration="1000">
+            <div class="animated-bg"></div>
+            
             <h2 class="section-title">Você é um Produtor Rural?</h2>
             <p>Transforme seu manejo sustentável em receita. Registre seus créditos de carbono conosco de forma simples e segura.</p>
-            <a href="cadastro.html" class="btn-secondary-inverted">Registrar Meus Créditos Agora</a>
+            
+            <a href="cadastro.html" class="btn btn-inverted">Registrar Meus Créditos Agora</a>
         </section>
 
     </main>
@@ -105,6 +183,14 @@
             <p>Contato: [Seu Email] | Endereço: [Localização do Escritório]</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, 
+        once: true 
+      });
+    </script>
 
     <script src="js/auth.js"></script>
     <script src="js/main.js"></script>
