@@ -1,0 +1,263 @@
+:root {
+    --color-green-dark: #1B5E20;
+    --color-green-medium: #4CAF50;
+    --color-green-light: #A5D6A7;
+    
+    --color-grey-bg: #F5F5F5;
+    --color-text-dark: #212121;
+    --color-white: #FFFFFF;
+
+    --color-bg-body: var(--color-grey-bg);
+    --color-bg-header: var(--color-white);
+    --color-text-primary: var(--color-text-dark);
+    --color-cta-bg: var(--color-green-medium);
+    --color-cta-text: var(--color-white);
+    --color-logo: var(--color-green-dark);
+    --color-border-soft: #e0e0e0;
+}
+
+.section-padded {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.2em;
+    color: var(--color-green-dark);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bg-soft {
+    background-color: var(--color-green-light);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    background-color: var(--color-bg-body);
+    /* Se tiver uma imagem, ajuste o background-image aqui */
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: var(--color-green-dark);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--color-text-primary);
+    margin-bottom: 30px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image {
+    width: 40%;
+    min-height: 300px;
+    background-color: var(--color-green-light);
+    border-radius: 10px;
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-card {
+    flex: 1;
+    padding: 25px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-green-medium);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 15px;
+}
+
+.cta-link-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+.cta-link-bottom a {
+    color: var(--color-green-dark);
+    font-weight: bold;
+}
+
+.marketplace-preview {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.center-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section-cta-produtor {
+    text-align: center;
+    background-color: var(--color-green-dark);
+    color: var(--color-white);
+    padding: 50px 20px;
+}
+
+.section-cta-produtor h2 {
+    color: var(--color-white);
+    font-size: 2em;
+}
+
+.section-cta-produtor p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.btn-secondary-inverted {
+    background-color: var(--color-white);
+    color: var(--color-green-dark);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.btn-secondary-inverted:hover {
+    background-color: var(--color-green-light);
+}
+
+.main-footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-white);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+.footer-content p {
+    margin: 5px 0;
+}
+
+.main-header {
+    width: 100%;
+    /* Fundo branco para clareza e contraste com o verde do logo */
+    background-color: var(--color-white); 
+    border-bottom: 2px solid var(--color-green-light); /* Linha sutil de divisão */
+    position: sticky; /* Mantém a barra no topo ao rolar */
+    top: 0;
+    z-index: 100; /* Garante que fique acima de outros elementos */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo a {
+    font-size: 1.8em; /* Aumentado para maior destaque */
+    font-weight: 700; /* Negrito Forte */
+    color: var(--color-green-dark); /* Logo no Verde Escuro (Confiança) */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 25px; /* Mais espaço entre os links */
+}
+
+.nav-links a:not(.btn-cta) {
+    text-decoration: none;
+    color: var(--color-text-dark); /* Links no Cinza Escuro */
+    font-size: 1em;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover:not(.btn-cta) {
+    color: var(--color-green-dark); 
+}
+
+.nav-links a:not(.btn-cta)::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-green-medium);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px; /* Posição abaixo do texto */
+    left: 0;
+}
+
+.nav-links a:hover:not(.btn-cta)::after {
+    width: 100%;
+}
+
+.btn-cta {
+    background-color: var(--color-green-medium); /* Verde Médio (#4CAF50) - Ação Principal */
+    color: var(--color-white) !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+.btn-cta:hover {
+    background-color: #388E3C; /* Tom de hover mais escuro */
+    transform: translateY(-1px);
+}
+
+/* ---------------------------------- */
+/* Utilitários (Tema/Idioma) */
+/* ---------------------------------- */
+.nav-utilities button {
+    background: var(--color-grey-bg); /* Fundo sutil */
+    border: 1px solid var(--color-green-dark);
+    color: var(--color-green-dark);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1; 
+    transition: background-color 0.2s;
+}
+
+.nav-utilities button:hover {
+    background-color: var(--color-green-light); /* Verde Pastel no hover */
+}
