@@ -4,13 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtor</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
+     <div class="dashbord-container">
+        <aside class="siderbar">
+            <div class="logo">
+                <a href="">EcoTrade</a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                       <a href="" class="navigation-items">
+                        <div>
+                            <img src="assets/icons/icone-casa.png" alt="" class="icone">
+                        </div>
+                        <div>
+                            Visão Geral
+                        </div>
+                       </a>
+                    </li>
+                    <li>
+                        <a href="registro-creditos.html" class="navigation-items">
+                            <div>
+                                <img src="assets/icons/f0249b7f70f7acac1b93c82db0833e39-icone-plano-de-moedas-de-dolar.webp" alt="" class="icone">
+                            </div>
+                            <div>
+                                Registrar Crédito
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="navigation-items">
+                            <div>
+                                <img src="assets/icons/icone-de-perfil-de-usuario1.jpg" alt="" class="icone">
+                            </div>
+                            <div>
+                                Informaçâes do Usuário
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashbord-content">
+            <header class="dashbord-header">
+                <h1>Visão Geral</h1>
+                <div>Olá usuário</div>
+            </header>
+
+            <section class="cards-section">
+                <div class="dashboard-card">
+                    <h5>Total de Créditos de CO2 Registrados</h5>
+                    <div>
+                        500
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h5>Total de Créditos de CO2 Disponiveis</h5>
+                    <div>
+                        500
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <h5>Total de Créditos de CO2 Ja Vendidos</h5>
+                    <div>
+                        500
+                    </div>
+                </div>
+            </section>
+
+            <section class="charset-section">
+                <div class="chart-container">
+                    <h2>Geração Mensal de Créditos de CO2</h2>
+                    <div class="chart-box">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
 <script src="js/auth.js"></script> 
 <script src="js/marketplace.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard-prod-ag.js"></script>
 </body>
 </html>
